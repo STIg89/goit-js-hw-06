@@ -12,3 +12,13 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const galleryList = document.querySelector('.gallery');
+console.log(images);
+
+const makeGalleryList = images.map(image => {
+  image = document.createElement('li');
+  image.image = console.log('image', image);
+  return image;
+});
+galleryList.append(...makeGalleryList);
