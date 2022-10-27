@@ -14,11 +14,16 @@ const images = [
 ];
 
 const galleryList = document.querySelector('.gallery');
-console.log(images);
 
 const makeGalleryList = images.map(image => {
-  image = document.createElement('li');
-  image.image = console.log('image', image);
-  return image;
+  return `
+  <li>
+    <img
+      src="${image.url} 
+      alt="${image.alt}">
+    </img>
+  </li>
+  `;
 });
-galleryList.append(...makeGalleryList);
+galleryList.insertAdjacentHTML('afterbegin', makeGalleryList.join(''));
+console.log(makeGalleryList.join(''));
