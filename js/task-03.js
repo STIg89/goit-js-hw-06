@@ -15,8 +15,9 @@ const images = [
 
 const galleryList = document.querySelector('.gallery');
 
-const makeGalleryList = images.map(image => {
-  return `
+const makeGalleryList = images
+  .map(image => {
+    return `
   <li>
     <img
       src="${image.url} 
@@ -24,6 +25,8 @@ const makeGalleryList = images.map(image => {
     </img>
   </li>
   `;
-});
-galleryList.insertAdjacentHTML('afterbegin', makeGalleryList.join(''));
-console.log(makeGalleryList.join(''));
+  })
+  .join('');
+
+galleryList.insertAdjacentHTML('afterbegin', makeGalleryList);
+// console.log(makeGalleryList);
