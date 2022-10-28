@@ -2,11 +2,11 @@ const counterValue = {
   value: 0,
   increment() {
     this.value += 1;
-    console.log(this);
+    // console.log(this);
   },
   decrement() {
     this.value -= 1;
-    console.log(this);
+    // console.log(this);
   },
 };
 
