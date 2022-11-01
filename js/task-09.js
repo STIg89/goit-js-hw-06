@@ -5,8 +5,9 @@ const refs = {
 };
 
 const bodyChangeColor = () => {
-  refs.body.style.backgroundColor = getRandomHexColor();
-  refs.colorValue.textContent = `${getRandomHexColor()}`;
+  const randomColor = getRandomHexColor();
+  refs.body.style.backgroundColor = randomColor;
+  refs.colorValue.textContent = `${randomColor}`;
 };
 
 refs.buttonChangeColor.addEventListener('click', bodyChangeColor);
